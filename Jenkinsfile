@@ -13,7 +13,6 @@ pipeline{
                      echo"Building the application"
                      bat "mvn clean install"
                  }
-
           }
 
          stage("Test"){
