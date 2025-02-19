@@ -33,8 +33,8 @@ pipeline{
                post {
               
                 success {
-                    junit '**%WORKSPACE\\target\surefire-reports\TEST-*.xml'
-                    archiveArtifacts '%WORKSPACE\\target\*.jar'
+                    junit '**\target\surefire-reports\TEST-*.xml'
+                    archiveArtifacts '\target\*.jar'
                 }
 
                        }
