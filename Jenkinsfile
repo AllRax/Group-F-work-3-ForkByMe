@@ -37,13 +37,16 @@ pipeline{
           stage('SonarQube Analysis') {
            
            steps {
+               withSonarQubeEnv() {
                   bat "mvn clean verify sonar:sonar -Dsonar.projectKey=group3Project -Dsonar.projectName='group3Project'"
                                 }
                       }
+          }
 
           stage("Deploy"){
 
                      steps{
+                         
                       echo "Deploying Application..."
                     }
 
