@@ -19,7 +19,8 @@ pipeline{
 
                steps{
                  echo "Running the surefire tests"
-                 bat "mvn clean test"
+                    bat "mvn clean package"
+                 bat "mvn test"
                }
 
          }
