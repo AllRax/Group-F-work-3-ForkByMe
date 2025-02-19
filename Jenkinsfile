@@ -8,6 +8,7 @@ pipeline{
 
                  steps{
                      echo"Building the application"
+                     bat "mvn clean install"
                  }
 
           }
@@ -16,9 +17,20 @@ pipeline{
 
                steps{
                  echo "Running the surefire tests"
+                 bat "mvn clean test"
                }
 
          }
+
+          stage("Issue surefire report"){
+
+                             steps{
+                               echo "Generating report..."
+
+
+                             }
+
+                       }
 
           stage("Deploy"){
 
