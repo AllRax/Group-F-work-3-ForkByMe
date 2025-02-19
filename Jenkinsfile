@@ -43,7 +43,7 @@ pipeline{
 
           stage("Deploy"){
 
-                    steps{
+                     steps{
                       echo "Deploying Application..."
                     }
 
