@@ -34,6 +34,13 @@ pipeline{
 
                        }
 
+          stage('SonarQube Analysis') {
+           
+            withSonarQubeEnv() {
+                  bat "mvn clean verify sonar:sonar -Dsonar.projectKey=group3Project -Dsonar.projectName='group3Project'"
+                                }
+                      }
+
           stage("Deploy"){
 
                     steps{
