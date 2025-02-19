@@ -30,14 +30,7 @@ pipeline{
                              steps{
                                echo "Generating report..."
                              }
-               post {
-              
-               success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                  
-                }
-
-                       }
+               
           }
 
           stage('SonarQube Analysis') {
