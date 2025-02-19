@@ -13,7 +13,7 @@ public class TaskManager {
     private DefaultListModel<String> taskListview;
     private JList taskListView;
     private JTextField taskField,taskFieldDescription,editdueDate,dueDate,editTaskNameLabel,editTaskDescriptionField;
-    private JToggleButton toggleButton = new JToggleButton("DARK MODE");
+    public JToggleButton toggleButton = new JToggleButton("DARK MODE");
     private CardLayout cardLayout = new CardLayout();
     private ArrayList<Tasks> taskList=new ArrayList<>();
     private JCheckBox taskCheckBox,edit_checkBox;
