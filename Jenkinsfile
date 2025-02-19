@@ -28,9 +28,13 @@ pipeline{
 
                              steps{
                                echo "Generating report..."
-
-
                              }
+               post {
+              
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
 
                        }
 
@@ -51,7 +55,7 @@ pipeline{
                             - Build Number: ${env.BUILD_NUMBER}
                             - Build URL: ${env.BUILD_URL}
                             """,
-                        to: 'andrewssuubi@gmail.com'
+                        to: 'andrewssuubi@gmail.com , aitaryanodrua@gmail.com'
                         )
                     }
 
@@ -66,7 +70,7 @@ pipeline{
 
                             Please check the logs for more details.
                             """,
-                            to: 'aitaryanodrua@gmail.com'
+                            to: 'aitaryanodrua@gmail.com , andrewssuubi@gmail.com'
                         )
                     }
                 }
