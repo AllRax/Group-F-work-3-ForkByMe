@@ -66,7 +66,7 @@ pipeline{
 
                             Please check the logs for more details.
                             """,
-                            to: 'aitaryanodrua@gmail.com , andrewssuubi@gmail.com'
+                            to: 'aitaryanodrua@gmail.com , andrewssuubi@gmail.com , kyacamear@gmail.com '
                         )
                     }
                 }
