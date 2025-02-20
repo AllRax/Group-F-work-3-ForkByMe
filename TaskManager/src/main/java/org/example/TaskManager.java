@@ -263,14 +263,16 @@ public class TaskManager
         return taskField;
     }
 
-    public JLabel taskLabelDescription() {
+    public JLabel taskLabelDescription() 
+    {
         JLabel taskName = new JLabel();
         taskName.setText("TASK DESCRIPTION: ");
         taskName.setFont(new Font("ARIAL", Font.BOLD, 14));
         return taskName;
     }
 
-    public JTextField taskFieldDescription() {
+    public JTextField taskFieldDescription() 
+     {
          taskFieldDescription = new JTextField();
         return taskFieldDescription;
     }
@@ -281,7 +283,8 @@ public class TaskManager
         return statusLabel;
     }
 
-    public JCheckBox taskCheckBox() {
+    public JCheckBox taskCheckBox()
+    {
          taskCheckBox = new JCheckBox();
         return taskCheckBox;
     }
@@ -292,7 +295,8 @@ public class TaskManager
         return dueDate;
     }
 
-public JTextField DueTaskDate(){
+public JTextField DueTaskDate()
+    {
          dueDate=new JTextField();
         return dueDate;
 }
@@ -300,7 +304,8 @@ public JTextField editDueDate(){
      editdueDate=new JTextField();
     return editdueDate;
 }
-    public JPanel settingsPanel() {
+    public JPanel settingsPanel()
+    {
         JPanel settingsPanel = new JPanel(new BorderLayout());
         toggleButton.addItemListener(itemListener);
         settingsPanel.add(BorderLayout.CENTER,toggleButton);
@@ -308,13 +313,15 @@ public JTextField editDueDate(){
         return settingsPanel;
     }
 
-    public JPanel editPanel(){
+    public JPanel editPanel()
+    {
         JPanel editPanel=new JPanel(new BorderLayout());
         editPanel.add(BorderLayout.CENTER,this.upperside());
         editPanel.add(BorderLayout.SOUTH,this.downSide());
         return editPanel;
     }
-    public JPanel upperside(){
+    public JPanel upperside()
+    {
         JPanel upSide = new JPanel();
         upSide.setPreferredSize(new Dimension(100, 100));
         GridLayout gridLayout = new GridLayout(4, 2);
