@@ -6,7 +6,8 @@ import javax.swing.*;
 import java.awt.event.ItemEvent;
 
 import static org.junit.jupiter.api.Assertions.*;
-public class TaskManagerTest {
+public class TaskManagerTest 
+{
     private TaskManager taskManager;
 
     @BeforeEach
@@ -15,7 +16,8 @@ public class TaskManagerTest {
     }
 
     @Test
-    void testTaskWindowCreation(){
+    void testTaskWindowCreation()
+    {
         JFrame frame = taskManager.Taskwindow();
         assertNotNull(frame);
         assertEquals("TODO LIST",frame.getTitle());
@@ -23,14 +25,16 @@ public class TaskManagerTest {
     }
 
     @Test
-    void testMenuView(){
+    void testMenuView()
+    {
         JMenuBar menuBar = taskManager.menuView();
         assertNotNull(menuBar);
         assertEquals(3,menuBar.getComponentCount());
     }
 
     @Test
-    void testAddTask(){
+    void testAddTask()
+    {
         taskManager.taskField().setText("Test Task");
         taskManager.DueTaskDate().setText("Test Description");
         taskManager.DueTaskDate().setText("2025-02-20");
@@ -38,7 +42,8 @@ public class TaskManagerTest {
 
     }
     @Test
-    void testItemStateChange(){
+    void testItemStateChange()
+    {
         JToggleButton toggleButton = taskManager.toggleButton;
         ItemEvent selectedEvent = new ItemEvent(toggleButton,ItemEvent.ITEM_STATE_CHANGED,toggleButton,ItemEvent.SELECTED);
     }
