@@ -2,7 +2,8 @@ import org.example.TaskManager;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-public class TaskManagerIntrationTest {
+public class TaskManagerIntrationTest
+    {
     private TaskManager taskManager;
 
     @BeforeEach
@@ -11,7 +12,8 @@ public class TaskManagerIntrationTest {
     }
 
     @Test
-    void testAddAndEditTaskIntegration(){
+    void testAddAndEditTaskIntegration()
+        {
 
     }
 }
