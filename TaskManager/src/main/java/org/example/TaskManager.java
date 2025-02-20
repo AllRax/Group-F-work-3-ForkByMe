@@ -5,7 +5,8 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
 
-public class TaskManager {
+public class TaskManager 
+{
     JFrame frame;
     JMenu filemenu, viewMenu;
     JMenuItem homeItem, settingsItem, helpItem;
@@ -22,7 +23,8 @@ public class TaskManager {
     }
 
 
-    public JFrame Taskwindow() {
+    public JFrame Taskwindow() 
+    {
         frame = new JFrame();
         frame.setTitle("TODO LIST");
         frame.setMinimumSize(new Dimension(800, 600));
@@ -41,7 +43,8 @@ public class TaskManager {
     }
 
     //Menu Bar consisting of the nav components
-    public JMenuBar menuView() {
+    public JMenuBar menuView()
+    {
         JMenuBar menuBar = new JMenuBar();
         menuBar.add(this.viewOption());
         menuBar.add(this.taskMenu());
@@ -68,7 +71,8 @@ public class TaskManager {
 
 
     //content Panel
-    public JPanel center() {
+    public JPanel center()
+    {
         centerPanel = new JPanel(cardLayout);
         centerPanel.setPreferredSize(new Dimension(100, 100));
         centerPanel.setForeground(Color.white);
@@ -83,7 +87,8 @@ public class TaskManager {
 
 
     //TaskMenu Option on task menuBar
-    public JMenu taskMenu() {
+    public JMenu taskMenu() 
+    {
         JMenu taskMenu = new JMenu("Task Menu");
         JMenuItem addTask = new JMenuItem("Add Task");
         JMenuItem editTask = new JMenuItem("Edit Task");
@@ -118,7 +123,8 @@ public class TaskManager {
     }
 
     //file Option on the task menuBar
-    public JMenu fileTask() {
+    public JMenu fileTask() 
+    {
         filemenu = new JMenu("file");
         JMenuItem exitItem = new JMenuItem("Exit");
         filemenu.add(exitItem);
@@ -127,34 +133,39 @@ public class TaskManager {
     }
 
     //northPanel
-    public JPanel north() {
+    public JPanel north() 
+    {
         northPanel = new JPanel(new BorderLayout());
         northPanel.setPreferredSize(new Dimension(100, 250));
         return northPanel;
     }
 
     //southPanel
-    public JPanel south() {
+    public JPanel south() 
+    {
         southPanel = new JPanel();
         southPanel.setPreferredSize(new Dimension(100, 200));
         return southPanel;
     }
 
     //west Panel
-    public JPanel west() {
+    public JPanel west() 
+    {
         westPanel = new JPanel();
         westPanel.setPreferredSize(new Dimension(250, 100));
         return westPanel;
     }
 
     //west panel
-    public JPanel nullPanel() {
+    public JPanel nullPanel() 
+    {
         JPanel right = new JPanel();
         right.setPreferredSize(new Dimension(200, 100));
         return right;
     }
 
-    public JPanel taskAddList() {
+    public JPanel taskAddList()
+    {
         listPanel = new JPanel();
         listPanel.setLayout(new BorderLayout());
         listPanel.add(BorderLayout.CENTER, this.upperList());
@@ -164,7 +175,8 @@ public class TaskManager {
     }
 
     //The list part of the contact list
-    public JPanel upperList() {
+    public JPanel upperList()
+    {
         JPanel up = new JPanel();
         taskListview = new DefaultListModel<>();
         taskListView = new JList<>(taskListview);
@@ -185,7 +197,8 @@ public class TaskManager {
 //    }
 
     //task addition method
-    public JPanel addTaskPanel() {
+    public JPanel addTaskPanel()
+    {
         taskPanel = new JPanel();
         taskPanel.setPreferredSize(new Dimension(100, 100));
         GridLayout gridLayout = new GridLayout(5, 2);
@@ -205,7 +218,8 @@ public class TaskManager {
         return taskPanel;
     }
 
-    public JButton addTaskButton(){
+    public JButton addTaskButton()
+    {
         JButton saveTask=new JButton("SAVE");
         saveTask.setForeground(Color.WHITE);
         saveTask.setBackground(new Color(30,144,255));
