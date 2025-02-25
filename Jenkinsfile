@@ -5,6 +5,8 @@ pipeline{
         maven "myMaven"
     }
 
+
+//         hello
      stages{
 
          stage("Build"){
