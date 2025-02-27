@@ -66,7 +66,7 @@ pipeline {
             steps {
                 echo "Deploying Application..."
                 bat '''
-                "C:/Program Files/butler.exe" push target/"C:/Users/DELL/OneDrive/Desktop/itchTest/Group-F-work-3-ForkByMe/Group-F-work-3-ForkByMe.jar" allrax/projectf:windows
+                bat '"C:\\Program Files\\butler.exe" push Group-F-work-3-ForkByMe.jar allrax/projecttf:windows'
                 '''
             }
         }
